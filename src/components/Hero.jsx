@@ -24,28 +24,26 @@ import {
 import { motion } from "framer-motion";
 
 const Hero = () => {
+  const handleDownload = () => {
+    const cvUrl =
+      "https://docs.google.com/document/d/1Q0QKKE7fCYEkrJeXSjyJ8NOx3EuFqFoXV0Pmxl6pSEg/edit?tab=t.0"; // Change this to your actual resume link
+    const link = document.createElement("a");
+    link.href = cvUrl;
+    link.setAttribute("download", "Bijoy_Prasad_Modi_CV.pdf");
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
   return (
     <div className="mt-24 max-w-[1200px] mx-auto relative">
-      <div className="grid md:grid-cols-2 place-items-center gap-8">
+      <div className="mt-24 max-w-[1200px] mx-auto relative flex flex-col md:flex-row items-center md:items-center gap-9">
         <motion.div
           initial={{ opacity: 0, y: -50 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 1 }}
+          className=" flex flex-col items-start justify-center w-full md:w-3/5 "
         >
-          <TypeAnimation
-            sequence={[
-              "Frontend Developer",
-              1000,
-              "Fullstack Developer",
-              1000,
-              "Consultant",
-              1000,
-            ]}
-            speed={50}
-            repeat={Infinity}
-            className="font-bold text-gray-400 text-xl md:text-5xl italic- mb-4"
-          />
           <motion.p
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
@@ -54,9 +52,23 @@ const Hero = () => {
             className="text-gray-200 md:text-7xl text-5xl tracking-tight mb-4"
           >
             Hello, I AM <br />
-            <span className="text-purple-500 text-6xl">BIJOY PRASAD MODI</span>
+            {/* <span className="text-purple-500 text-6xl">BIJOY PRASAD MODI</span> */}
           </motion.p>
-          <motion.p
+          <TypeAnimation
+            sequence={[
+              "Bijoy Prasad Modi",
+              1000,
+              "A Frontend Developer",
+              1000,
+              "A Fullstack Web Developer",
+              1000,
+            ]}
+            speed={50}
+            repeat={Infinity}
+            className="font-bold text-purple-500 text-xl md:text-5xl italic- mb-4"
+          />
+
+          {/* <motion.p
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
@@ -64,7 +76,7 @@ const Hero = () => {
             className="text-gray-300 max-w-[300px] md:max-w-[500px] md:text-2xl text-lg mb-6"
           >
             I am a passionate fullstack web developer
-          </motion.p>
+          </motion.p> */}
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -77,6 +89,7 @@ const Hero = () => {
                 scale: 1.05,
                 boxShadow: "0px 0px 8px rgba(0, 0, 0, 0.3)",
               }}
+              onClick={handleDownload}
               className="z-10 cursor-pointer font-bold text-gray-200 md:w-auto p-4 border border-purple-400 rounded-xl"
             >
               Download CV
@@ -101,7 +114,7 @@ const Hero = () => {
 
         <motion.img
           src={profilepic}
-          className="w-[300px] md:w-[450px]"
+          className="w-[300px] md:w-[410px] self-center justify-self-center"
           initial={{ opacity: 0, scale: 0.8 }}
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
