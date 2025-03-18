@@ -21,18 +21,9 @@ import {
   DiReact,
   DiMongodb,
 } from "react-icons/di";
-import { motion, useTime, useTransform } from "framer-motion";
+import { motion } from "framer-motion";
 
 const Hero = () => {
-  const time = useTime();
-
-  const rotate = useTransform(time, [0, 3000], [0, 360], {
-    clamp: false,
-  });
-  const rotatingBg = useTransform(rotate, (r) => {
-    return `conic-gradient(from ${r}deg, #f7c136 0%, #0563f0 20%, #EC4899 40%,   #f7c136 100%)`;
-  });
-
   const handleDownload = () => {
     const cvUrl =
       "https://drive.google.com/uc?export=download&id=1gWfeyDqChLEGF18fzvooPyT81BtnodhK"; // Change this to your actual resume link
@@ -127,23 +118,15 @@ const Hero = () => {
           </motion.div>
         </motion.div>
 
-        <div className="animate-bounceCustom ">
-          
-            <motion.img
-              src={profilepic}
-              className="relative w-full h-full rounded-full p-1 z-10"
-              initial={{ opacity: 0, scale: 0.8 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 1 }}
-            />
-            <motion.div
-              className="absolute -inset-[2px] rounded-full "
-              style={{
-                background: rotatingBg,
-              }}
-            />
-          
+        <div className="animate-bounceCustom">
+          <motion.img
+            src={profilepic}
+            className="w-full h-full rounded-full border-transparent p-1"
+            initial={{ opacity: 0, scale: 0.8 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 1 }}
+          />
         </div>
       </div>
       <motion.div
