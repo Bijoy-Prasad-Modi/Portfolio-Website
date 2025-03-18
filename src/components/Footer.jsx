@@ -9,18 +9,18 @@ const Footer = () => {
       <div className="space-y-4">
         <h3 className="text-2xl text-gray-200 font-semibold">B.P.Modi</h3>
         <div className="flex flex-row gap-6 text-gray-400 text-4xl">
-          <a href="#">
+          <a href="https://github.com/Bijoy-Prasad-Modi">
             <FaGithubSquare />
           </a>
-          <a href="#">
+          <a href="https://www.linkedin.com/in/bijoy-prasad-modi">
             <FaLinkedin />
           </a>
-          <a href="#">
+          <a href="https://x.com/BijoyPrasa50837">
             <FontAwesomeIcon icon={faXTwitter} className="text-6xl w-10 h-10" />
           </a>
         </div>
       </div>
-      <p className="text-gray-400">@2024 B.P.Modi</p>
+      <p className="text-gray-400">@2025 B.P.Modi</p>
     </div>
   );
 };

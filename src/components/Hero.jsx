@@ -21,12 +21,21 @@ import {
   DiReact,
   DiMongodb,
 } from "react-icons/di";
-import { motion } from "framer-motion";
+import { motion, useTime, useTransform } from "framer-motion";
 
 const Hero = () => {
+  const time = useTime();
+
+  const rotate = useTransform(time, [0, 3000], [0, 360], {
+    clamp: false,
+  });
+  const rotatingBg = useTransform(rotate, (r) => {
+    return `conic-gradient(from ${r}deg, #f7c136 0%, #0563f0 20%, #EC4899 40%,   #f7c136 100%)`;
+  });
+
   const handleDownload = () => {
     const cvUrl =
-      "https://docs.google.com/document/d/1Q0QKKE7fCYEkrJeXSjyJ8NOx3EuFqFoXV0Pmxl6pSEg/edit?tab=t.0"; // Change this to your actual resume link
+      "https://drive.google.com/uc?export=download&id=1gWfeyDqChLEGF18fzvooPyT81BtnodhK"; // Change this to your actual resume link
     const link = document.createElement("a");
     link.href = cvUrl;
     link.setAttribute("download", "Bijoy_Prasad_Modi_CV.pdf");
@@ -35,7 +44,7 @@ const Hero = () => {
     document.body.removeChild(link);
   };
   return (
-    <div className="mt-24 max-w-[1200px] mx-auto relative">
+    <div className="mt-24 max-w-[1200px] pl-9 mx-auto relative" id="hero">
       <div className="mt-24 max-w-[1200px] mx-auto relative flex flex-col md:flex-row items-center md:items-center gap-9">
         <motion.div
           initial={{ opacity: 0, y: -50 }}
@@ -95,15 +104,21 @@ const Hero = () => {
               Download CV
             </motion.button>
             <div className="flex gap-6 flex-row text-4xl md:text-6xl text-purple-400 z-20">
-              <motion.a whileHover={{ scale: 1.2 }} href="#">
+              <motion.a
+                whileHover={{ scale: 1.2 }}
+                href="https://github.com/Bijoy-Prasad-Modi"
+              >
                 <AiOutlineGithub />
               </motion.a>
-              <motion.a whileHover={{ scale: 1.2 }} href="#">
+              <motion.a
+                whileHover={{ scale: 1.2 }}
+                href="https://www.linkedin.com/in/bijoy-prasad-modi"
+              >
                 <AiOutlineLinkedin />
               </motion.a>
               <motion.a
                 whileHover={{ scale: 1.2 }}
-                href="#"
+                href="https://x.com/BijoyPrasa50837"
                 className="text-4xl sm:text-5xl md:text-6xl"
               >
                 <FontAwesomeIcon icon={faXTwitter} />
@@ -112,14 +127,24 @@ const Hero = () => {
           </motion.div>
         </motion.div>
 
-        <motion.img
-          src={profilepic}
-          className="w-[300px] md:w-[410px] self-center justify-self-center"
-          initial={{ opacity: 0, scale: 0.8 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 1 }}
-        />
+        <div className="animate-bounceCustom ">
+          
+            <motion.img
+              src={profilepic}
+              className="relative w-full h-full rounded-full p-1 z-10"
+              initial={{ opacity: 0, scale: 0.8 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 1 }}
+            />
+            <motion.div
+              className="absolute -inset-[2px] rounded-full "
+              style={{
+                background: rotatingBg,
+              }}
+            />
+          
+        </div>
       </div>
       <motion.div
         initial={{ opacity: 0 }}

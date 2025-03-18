@@ -13,36 +13,37 @@ const Contact = () => {
               <h3 className="text-4xl font-semibold mb-5">
                 About <span>Me</span>
               </h3>
-              <p className="text-justify leading-7 w-11/12 mx-auto">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sequi,
-                adipisci praesentium! Tenetur laboriosam accusantium adipisci,
-                quia eius odio at veritatis sapiente similique, aperiam
-                consectetur nihil fuga magnam ipsam esse! Nemo.
+              <p className="text-justify leading-7 w-full mx-auto">
+                I am a passionate Frontend and Full-Stack Web Developer,
+                dedicated to crafting seamless, user-friendly digital
+                experiences. With expertise in modern web technologies like
+                React, Node.js, and Tailwind CSS. I am eager to collaborate on
+                innovative projects and bring creative ideas to life.
               </p>
             </div>
-            <div className="flex mt-10 items-center gap-7">
-              <div className="bg-gray-800/40 p-4 rounded-lg">
+            <div className="flex mt-6 items-center gap-7">
+              <div className="bg-gray-800/40 p-4 py-5 rounded-lg w-1/4 ml-2">
                 <h3 className="md:text-4xl text-2xl font-semibold text-white">
-                  11 <span>+</span>
+                  5 <span>+</span>
                 </h3>
                 <p className="text-xs md:text-base">
                   <span>Projects</span>
                 </p>
               </div>
-              <div className="bg-gray-800/40 p-5 rounded-lg">
+              <div className="bg-gray-800/40 p-4 pl-5 my-1 rounded-lg w-36">
                 <h3 className="md:text-4xl text-2xl font-semibold text-white">
-                  5 <span>+</span>
+                  2 <span>+</span>
                 </h3>
                 <p className="text-xs md:text-base">
-                  <span>Years of experience</span>
+                  <span>Hackathons Attended</span>
                 </p>
               </div>
               <div className="bg-gray-800/40 p-5 rounded-lg">
                 <h3 className="md:text-4xl text-2xl font-semibold text-white">
-                  30 <span>+</span>
+                  8 <span>+</span>
                 </h3>
                 <p className="text-xs md:text-base">
-                  <span>Happy Clients</span>
+                  <span>Github Repo</span>
                 </p>
               </div>
             </div>
@@ -62,14 +63,14 @@ const Contact = () => {
               id="name"
               placeholder="Your Name ..."
               name="name"
-              className="mb-2 w-full rounded-md border border-purple-600 py-2 pl-2 pr-4"
+              className="mb-2 w-full rounded-md outline-none focus:ring-[3px] focus:ring-purple-500 py-2 pl-2 pr-3 cursor-text "
             />
             <input
               type="email"
               id="email"
               placeholder="Your Email ..."
               name="email"
-              className="mb-2 w-full rounded-md border border-purple-600 py-2 pl-2 pr-4"
+              className="mb-2 w-full rounded-md outline-none focus:ring-[3px] focus:ring-purple-500 py-2 pl-2 pr-3"
             />
             <textarea
               name="textarea"
@@ -77,11 +78,11 @@ const Contact = () => {
               cols="30"
               rows="4"
               placeholder="Your Message ..."
-              className="mb-2 w-full rounded-md border border-purple-600 py-2 pl-2 pr-4"
+              className="mb-2 w-full rounded-md outline-none focus:ring-[3px] focus:ring-purple-500 py-2 pl-2 pr-3"
             />
             <button
               type="submit"
-              className="w-full py-3 rounded-md text-gray-100 font-semibold text-xl bg-primary-color"
+              className="w-full py-3 rounded-md text-gray-100 font-semibold text-xl bg-purple-950"
             >
               Send Message
             </button>
