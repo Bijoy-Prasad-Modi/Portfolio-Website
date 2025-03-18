@@ -45,7 +45,7 @@ const Portfolio = () => {
     clamp: false,
   });
   const rotatingBg = useTransform(rotate, (r) =>{
-    return `conic-gradient(from ${r}deg, #9333ea 0%, #f78f20 20%, #1f61f0 40%, #fc14dd 60%, #9333ea 100%)`
+    return `conic-gradient(from ${r}deg, #841be3 0%,  #1f61f0 40%, #e720f5 60%, #841be3 100%)`
   })
 
 
