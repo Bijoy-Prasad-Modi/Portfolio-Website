@@ -23,6 +23,21 @@ import {
 } from "react-icons/di";
 import { motion } from "framer-motion";
 
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.2, // Each icon appears with a 0.2s delay
+    },
+  },
+};
+
+const iconVariants = {
+  hidden: { opacity: 0, y: 30 }, // Starts from below
+  visible: { opacity: 1, y: 0, transition: { duration: 0.5 } }, // Moves up smoothly
+};
+
 const Hero = () => {
   const handleDownload = () => {
     const cvUrl =
@@ -86,31 +101,34 @@ const Hero = () => {
           >
             <motion.button
               whileHover={{
-                scale: 1.05,
-                boxShadow: "0px 0px 8px rgba(0, 0, 0, 0.3)",
+                scale: 1.15,
+                boxShadow: "0px 0px 26px rgba(168, 85, 247, 0.8)",
+                transition: { duration: 0.15, ease: "easeInOut" },
               }}
               onClick={handleDownload}
               className="z-10 cursor-pointer font-bold text-gray-200 md:w-auto p-4 border border-purple-400 rounded-xl"
             >
               Download CV
             </motion.button>
-            <div className="flex gap-6 flex-row text-4xl md:text-6xl text-purple-400 z-20">
+            <div className="flex gap-6 flex-row text-4xl md:text-6xl text-purple-400 z-40">
               <motion.a
-                whileHover={{ scale: 1.2 }}
+                whileHover={{ scale: 1.15 }}
                 href="https://github.com/Bijoy-Prasad-Modi"
+                className="hover:shadow-[0_0_15px_#a855f7] rounded-lg "
               >
                 <AiOutlineGithub />
               </motion.a>
               <motion.a
-                whileHover={{ scale: 1.2 }}
+                whileHover={{ scale: 1.15 }}
                 href="https://www.linkedin.com/in/bijoy-prasad-modi"
+                className="hover:shadow-[0_0_15px_#a855f7] rounded-lg"
               >
                 <AiOutlineLinkedin />
               </motion.a>
               <motion.a
-                whileHover={{ scale: 1.2 }}
+                whileHover={{ scale: 1.11 }}
                 href="https://x.com/BijoyPrasa50837"
-                className="text-4xl sm:text-5xl md:text-6xl"
+                className="text-1xl sm:text-5xl md:text-6xl hover:shadow-[0_0_15px_#a855f7] rounded-lg"
               >
                 <FontAwesomeIcon icon={faXTwitter} />
               </motion.a>
@@ -130,21 +148,33 @@ const Hero = () => {
         </div>
       </div>
       <motion.div
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
+        variants={containerVariants}
+        initial="hidden"
+        whileInView="visible"
         viewport={{ once: true }}
-        transition={{ duration: 1, delay: 2 }}
         className="flex flex-row text-7xl px-12 md:px-0 w-full justify-center items-center py-24"
       >
         <p className="text-gray-200 mr-6">My Tech Stack</p>
-        <DiHtml5 className="text-orange-600 mx-2" />
-        <DiCss3 className="text-blue-600 mx-2" />
-        <DiJavascript1 className="text-yellow-400 mx-2" />
-        <DiReact className="text-blue-500 mx-2" />
-        <DiNodejsSmall className="text-green-600 mx-2" />
-        <DiMongodb className="text-green-800 mx-2" />
-        {/* <ExpressIcon className="text-green-800 mx-2" /> */}
-        {/* <img src={ExpressIcon} alt="" className="w-4 sm:w-20 md:w-24 lg:w-32 xl:w-40 h-6" /> */}
+
+        {/* Icons Appearing One by One */}
+        <motion.div variants={iconVariants}>
+          <DiHtml5 className="text-orange-600 mx-2" />
+        </motion.div>
+        <motion.div variants={iconVariants}>
+          <DiCss3 className="text-blue-600 mx-2" />
+        </motion.div>
+        <motion.div variants={iconVariants}>
+          <DiJavascript1 className="text-yellow-400 mx-2" />
+        </motion.div>
+        <motion.div variants={iconVariants}>
+          <DiReact className="text-blue-500 mx-2" />
+        </motion.div>
+        <motion.div variants={iconVariants}>
+          <DiNodejsSmall className="text-green-600 mx-2" />
+        </motion.div>
+        <motion.div variants={iconVariants}>
+          <DiMongodb className="text-green-800 mx-2" />
+        </motion.div>
       </motion.div>
       <div className="absolute inset-0 hidden md:block">
         <ShinyEffect left={0} top={0} size={1400} />

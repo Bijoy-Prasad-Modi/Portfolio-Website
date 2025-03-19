@@ -4,7 +4,7 @@ import project2 from "../assets/project2.png";
 import project3 from "../assets/project3.png";
 import { AiFillGithub, AiOutlineGithub } from "react-icons/ai";
 import Reveal from "./Reveal";
-import {motion, useTime, useTransform } from "framer-motion";
+import { motion, useTime, useTransform } from "framer-motion";
 
 const projects = [
   {
@@ -41,16 +41,15 @@ const projects = [
 const Portfolio = () => {
   const time = useTime();
 
-  const rotate = useTransform(time, [0,3000], [0,360],{
+  const rotate = useTransform(time, [0, 3000], [0, 360], {
     clamp: false,
   });
-  const rotatingBg = useTransform(rotate, (r) =>{
-    return `conic-gradient(from ${r}deg, #841be3 0%,  #1f61f0 40%, #e720f5 60%, #841be3 100%)`
-  })
-
+  const rotatingBg = useTransform(rotate, (r) => {
+    return `conic-gradient(from ${r}deg, #841be3 ,  #1f61f0 , #e720f5)`;
+  });
 
   return (
-    <div className="max-w-[1000px] mx-auto p-6 md:my-20" id="portfolio">
+    <div className="max-w-[1100px] mx-auto p-6 pt-4 md:my-20" id="portfolio">
       <h2 className="text-3xl font-bold text-gray-200 mb-8">Portfolio</h2>
       {projects.map((project, index) => (
         <Reveal>
@@ -61,16 +60,16 @@ const Portfolio = () => {
             } mb-12`}
           >
             <div className="w-full md:w-1/2 p-2">
-              <div className="relative ">
+              <div className="relative hover:scale-[1.2] transition duration-300">
                 <img
                   src={project.img}
                   alt={project.title}
-                  className="relative w-full h-full rounded-md z-10 "
+                  className="relative w-full h-full rounded-md z-10"
                 />
                 <motion.div
                   className="absolute -inset-[4px] rounded-md "
                   style={{
-                    background: rotatingBg
+                    background: rotatingBg,
                   }}
                 />
               </div>
@@ -83,15 +82,15 @@ const Portfolio = () => {
               <div className="flex space-x-4">
                 <a
                   href={project.links.site}
-                  className="px-4 py-2 bg-slate-600 text-gray-200 rounded-lg hover:bg-slate-700
-                                        transition duration-300"
+                  className="px-4 py-2 bg-slate-700  hover:shadow-[0_0_15px_#a855f7] text-gray-200 rounded-lg 
+                                        transition duration-300 hover:scale-[1.1]"
                 >
                   View Site
                 </a>
                 <a
                   href={project.links.github}
-                  className="px-4 py-2 bg-slate-600 text-gray-200 rounded-lg hover:bg-slate-700
-                                        transition duration-300"
+                  className="px-4 py-2 bg-slate-700 hover:shadow-[0_0_15px_#a855f7] text-gray-200 rounded-lg 
+                                        transition duration-300 hover:scale-[1.15]"
                 >
                   <AiOutlineGithub />
                 </a>

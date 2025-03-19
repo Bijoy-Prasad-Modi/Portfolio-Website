@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import { AiFillLinkedin, AiFillGithub } from "react-icons/ai";
 import { motion } from "framer-motion";
 import Reveal from "./Reveal";
 
 const Contact = () => {
+  const [clicked, setClicked] = useState(false);
   return (
     <div className="px-6 max-w-[1000px] mx-auto md:my-12" id="contact">
       <Reveal>
@@ -23,7 +24,7 @@ const Contact = () => {
             </div>
             <div className="flex mt-6 items-center gap-7">
               <div className="bg-gray-800/40 p-4 py-5 rounded-lg w-1/4 ml-2">
-                <h3 className="md:text-4xl text-2xl font-semibold text-white">
+                <h3 className="md:text-4xl text-2xl font-semibold text-white ">
                   5 <span>+</span>
                 </h3>
                 <p className="text-xs md:text-base">
@@ -82,7 +83,10 @@ const Contact = () => {
             />
             <button
               type="submit"
-              className="w-full py-3 rounded-md text-gray-100 font-semibold text-xl bg-purple-950"
+              onClick={() => setClicked(true)}
+              className={`w-full py-3 rounded-md text-gray-100 font-semibold text-xl hover:shadow-[0_0_15px_#a44df7] transition duration-300 ${
+                clicked ? "bg-purple-950" : "bg-purple-500"
+              }`}
             >
               Send Message
             </button>
