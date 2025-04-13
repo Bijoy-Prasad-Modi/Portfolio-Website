@@ -41,7 +41,7 @@ const iconVariants = {
 const Hero = () => {
   const handleDownload = () => {
     const cvUrl =
-      "https://drive.google.com/uc?export=download&id=1gWfeyDqChLEGF18fzvooPyT81BtnodhK"; // Change this to your actual resume link
+      "https://drive.google.com/uc?export=download&id=1_w8ZpJjgal1kFolTvdx8OfMgd9CJEzon"; // Change this to your actual resume link
     const link = document.createElement("a");
     link.href = cvUrl;
     link.setAttribute("download", "Bijoy_Prasad_Modi_CV.pdf");
