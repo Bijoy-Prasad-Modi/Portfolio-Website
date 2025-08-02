@@ -1,8 +1,8 @@
-import React from "react";
 import project1 from "../assets/project1.png";
 import project2 from "../assets/project2.png";
 import project3 from "../assets/project3.png";
-import { AiFillGithub, AiOutlineGithub } from "react-icons/ai";
+import project4 from "../assets/project4.png";
+import { AiOutlineGithub } from "react-icons/ai";
 import Reveal from "./Reveal";
 import { motion, useTime, useTransform } from "framer-motion";
 
@@ -19,6 +19,16 @@ const projects = [
   },
   {
     img: project2,
+    title: "WorldPlates",
+    description:
+      "A fun and easy to use recipe app where you can search and explore delicious dishes from around the world.",
+    links: {
+      site: "https://world-plates.vercel.app",
+      github: "https://github.com/Bijoy-Prasad-Modi/World-Plates",
+    },
+  },
+  {
+    img: project3,
     title: "MediCare",
     description:
       "A fullstack Hospital Management System built with MERN stack.",
@@ -28,7 +38,7 @@ const projects = [
     },
   },
   {
-    img: project3,
+    img: project4,
     title: "CryptoTrack",
     description: "A Crypto Tracker app created using React and Material UI.",
     links: {

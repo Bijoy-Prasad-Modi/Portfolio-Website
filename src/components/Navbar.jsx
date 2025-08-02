@@ -49,7 +49,7 @@ const Navbar = () => {
             </Link>
           </li>
           <li>
-            <Link to="contact" smooth={true} offset={-55} duration={500} className="cursor-pointer">
+            <Link to="contact" smooth={true} offset={-70} duration={500} className="cursor-pointer">
               Contact
             </Link>
           </li>

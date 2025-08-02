@@ -18,7 +18,7 @@ const Contact = () => {
                 I am a passionate Frontend and Full-Stack Web Developer,
                 dedicated to crafting seamless, user-friendly digital
                 experiences. With expertise in modern web technologies like
-                React, Node.js, and Tailwind CSS. I am eager to collaborate on
+                React, Redux, Node.js, and Tailwind CSS. I am eager to collaborate on
                 innovative projects and bring creative ideas to life.
               </p>
             </div>
@@ -33,7 +33,7 @@ const Contact = () => {
               </div>
               <div className="bg-gray-800/40 p-4 pl-5 my-1 rounded-lg w-36">
                 <h3 className="md:text-4xl text-2xl font-semibold text-white">
-                  2 <span>+</span>
+                  4 <span>+</span>
                 </h3>
                 <p className="text-xs md:text-base">
                   <span>Hackathons Attended</span>
@@ -41,7 +41,7 @@ const Contact = () => {
               </div>
               <div className="bg-gray-800/40 p-5 rounded-lg">
                 <h3 className="md:text-4xl text-2xl font-semibold text-white">
-                  8 <span>+</span>
+                  10 <span>+</span>
                 </h3>
                 <p className="text-xs md:text-base">
                   <span>Github Repo</span>
