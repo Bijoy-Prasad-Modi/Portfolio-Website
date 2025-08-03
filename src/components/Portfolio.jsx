@@ -39,8 +39,8 @@ const projects = [
   },
   {
     img: project4,
-    title: "CryptoTrack",
-    description: "A Crypto Tracker app created using React and Material UI.",
+    title: "CryptoCrate",
+    description: "A crypto tracker app that shows real-time prices, rankings, and market stats for your favorite coins.",
     links: {
       site: "https://react-crypto-app-track.vercel.app",
       github: "https://github.com/Bijoy-Prasad-Modi/Crypto-Tracker-App",
