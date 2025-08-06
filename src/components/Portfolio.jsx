@@ -29,9 +29,9 @@ const projects = [
   },
   {
     img: project3,
-    title: "MediCare",
+    title: "MedXPoint",
     description:
-      "A fullstack Hospital Management System built with MERN stack.",
+      "A full stack hospital management system app that helps admins and patients handle appointments, doctors, and more, all in one smooth place, built using MERN stack technology.",
     links: {
       site: "https://hms-app-client.vercel.app",
       github: "https://github.com/Bijoy-Prasad-Modi/Hospital-Management-App",
@@ -40,7 +40,8 @@ const projects = [
   {
     img: project4,
     title: "CryptoCrate",
-    description: "A crypto tracker app that shows real-time prices, rankings, and market stats for your favorite coins.",
+    description:
+      "A crypto tracker app that shows real-time prices, rankings, and market stats for your favorite coins.",
     links: {
       site: "https://react-crypto-app-track.vercel.app",
       github: "https://github.com/Bijoy-Prasad-Modi/Crypto-Tracker-App",

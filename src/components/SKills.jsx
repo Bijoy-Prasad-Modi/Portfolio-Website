@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 import {
   DiHtml5,
@@ -41,7 +41,8 @@ const Skills = () => {
       timeout = setTimeout(() => {
         if (sectionRef.current) {
           const section = sectionRef.current.getBoundingClientRect();
-          const scrollPercentage = (window.innerHeight - section.top) / section.height;
+          const scrollPercentage =
+            (window.innerHeight - section.top) / section.height;
 
           if (scrollPercentage >= 0.96) {
             setActiveTab("Fullstack");

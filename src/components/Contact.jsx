@@ -1,6 +1,4 @@
-import React, { useState } from "react";
-import { AiFillLinkedin, AiFillGithub } from "react-icons/ai";
-import { motion } from "framer-motion";
+import { useState } from "react";
 import Reveal from "./Reveal";
 
 const Contact = () => {
@@ -18,8 +16,9 @@ const Contact = () => {
                 I am a passionate Frontend and Full-Stack Web Developer,
                 dedicated to crafting seamless, user-friendly digital
                 experiences. With expertise in modern web technologies like
-                React, Redux, Node.js, and Tailwind CSS. I am eager to collaborate on
-                innovative projects and bring creative ideas to life.
+                React, Redux, Node.js, and Tailwind CSS. I am eager to
+                collaborate on innovative projects and bring creative ideas to
+                life.
               </p>
             </div>
             <div className="flex mt-6 items-center gap-7">
