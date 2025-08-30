@@ -21,7 +21,7 @@ const Contact = () => {
                 life.
               </p>
             </div>
-            <div className="flex mt-6 items-center gap-7">
+            {/* <div className="flex mt-6 items-center gap-7">
               <div className="bg-gray-800/40 p-4 py-5 rounded-lg w-1/4 ml-2">
                 <h3 className="md:text-4xl text-2xl font-semibold text-white ">
                   5 <span>+</span>
@@ -46,7 +46,7 @@ const Contact = () => {
                   <span>Github Repo</span>
                 </p>
               </div>
-            </div>
+            </div> */}
           </div>
 
           <form
