@@ -40,7 +40,7 @@ const iconVariants = {
 const Hero = () => {
   const handleDownload = () => {
     const cvUrl =
-      "https://drive.google.com/uc?export=download&id=1_w8ZpJjgal1kFolTvdx8OfMgd9CJEzon"; // Change this to your actual resume link
+      "https://drive.google.com/uc?export=download&id=1AVEuURGUD8OwmigeTklI4MD6n8AGhrc9"; // Change this to your actual resume link
     const link = document.createElement("a");
     link.href = cvUrl;
     link.setAttribute("download", "Bijoy_Prasad_Modi_CV.pdf");
@@ -107,7 +107,7 @@ const Hero = () => {
               onClick={handleDownload}
               className="z-10 cursor-pointer font-bold text-gray-200 md:w-auto p-4 border border-purple-400 rounded-xl"
             >
-              Download CV
+              My Resume
             </motion.button>
             <div className="flex gap-6 flex-row text-4xl md:text-6xl text-purple-400 z-40">
               <motion.a
